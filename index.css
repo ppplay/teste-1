@@ -1,0 +1,563 @@
+/* Estilos globais */
+:root {
+    --cor-padrão: #ff523b;
+    --cor-padrão-hover: #f3b2e5;
+    --cor-fonte: #fff;
+    --cor-fonte-p: #555;
+    --cor-btn: #563434;
+    --cor-btn-hover: #15ff00;
+    --cor-btn-font: #000;
+    --cor-fonte-corpo: #555;
+    --cor-fonte-corpo-lev: #777;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #FFF0F5;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: flex-end; /* Alinha o conteúdo à direita */
+}
+
+.nav {
+    position: fixed; /* Fixa a posição no topo direito */
+    top: 20px; /* Ajusta a distância do topo */
+    right: 20px; /* Ajusta a distância da direita */
+    background-color: #ffffff; /* Cor de fundo branca */
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px; /* Borda arredondada */
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    display: flex;
+    align-items: center; /* Alinha os itens na mesma altura */
+}
+
+body, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+    width: 450px;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: #161919;
+}
+
+.nav input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+    background-color: #f974a1;
+}
+
+.nav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.nav span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 50px; /* Adiciona espaço extra acima do conteúdo */
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+    margin-top: 20px; /* Move o texto um pouco mais para baixo */
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.col-2 p {
+    font-weight: 600;
+    color: var(--cor-btn-font);
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--cor-fonte);
+    background: var(--cor-btn);
+    padding: 8px 30px;
+    margin: 38px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+    scroll-behavior: smooth;
+}
+
+.btn:hover {
+    background: var(--cor-btn-hover);
+    color: var(--cor-btn-font);
+}
+
+img {
+    flex-basis: 50%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px; /* Move a imagem um pouco mais para baixo */
+}
+.about-us h2{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 40px;
+}
+.Our {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 40px;
+}
+
+.all-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    overflow: hidden;
+    background: #ffffff;
+    color: #21201e;
+    text-align: center;
+    width: 240px;
+    height: 400px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    margin: 2rem;
+}
+
+.product .product-title, .product .product-price {
+    font-size: 12px;
+}
+
+.product:hover img {
+    scale: 1.1;
+}
+
+.product:hover {
+    box-shadow: 5px 15px 25px #eeeeee;
+}
+
+.product img {
+    height: 200px;
+    margin: 1rem;
+    transition: all 0.3s;
+}
+
+.product a:link, .product a:visited {
+    color: #ececec;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2c3e50;
+    padding: 1.1rem 3rem;
+    border-radius: 1rem;
+    margin-top: 10px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.product a:hover {
+    transform: scale(1.1);
+}
+
+#produtos {
+    scroll-behavior: smooth;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #000; /* Cor preta */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Estilos para links no rodapé */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+}
+
+.about-us img {
+    border-radius: 50%;
+    max-width: 200px;
+    float: left; /* This will move the image to the left */
+    margin-right: 30px; /* Add some space between the image and the text */
+}
+
+.about-us-content {
+    max-width: 600px;
+    background-color: #fff; /* Adiciona um fundo branco */
+    padding: 20px;
+    border-radius: 15px; /* Torna os cantos mais arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+}
+
+.about-us-content h2 {
+    margin-bottom: 20px;
+}
+
+.about-us img:first-of-type {
+    border-radius: 50%;
+    max-width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+
+.about-us img:last-of-type {
+    border-radius: 50%;
+    max-width: 200px;
+    float: right;
+    margin-left: 20px;
+}
+
+/* Estilos globais */
+:root {
+    --cor-padrão: #ff523b;
+    --cor-padrão-hover: #f3b2e5;
+    --cor-fonte: #fff;
+    --cor-fonte-p: #555;
+    --cor-btn: #563434;
+    --cor-btn-hover: #15ff00;
+    --cor-btn-font: #000;
+    --cor-fonte-corpo: #555;
+    --cor-fonte-corpo-lev: #777;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+}
+
+body, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+    width: 450px;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: #161919;
+}
+
+.nav input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+    background-color: #f974a1;
+}
+
+.nav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.nav span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+    margin-top: 20px;
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.col-2 p {
+    font-weight: 600;
+    color: var(--cor-btn-font);
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--cor-fonte);
+    background: var(--cor-btn);
+    padding: 8px 30px;
+    margin: 38px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+    scroll-behavior: smooth;
+}
+
+.btn:hover {
+    background: var(--cor-btn-hover);
+    color: var(--cor-btn-font);
+}
+
+img {
+    flex-basis: 50%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.Our {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 40px;
+}
+
+.all-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    overflow: hidden;
+    background: #ffffff;
+    color: #21201e;
+    text-align: center;
+    width: 240px;
+    height: 400px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    margin: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+   
+    .nav{
+        display: none;
+    }
+   
+    .topo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .col-2 {
+        width: 100%;
+    }
+    
+    .col-2 h1 {
+        font-size: 30px;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+        max-width: 220px;
+    }
+    
+    .about-us img {
+        max-width: 150px;
+        margin: 10px 0;
+    }
+    
+    .product {
+        width: 90%;
+        height: auto;
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Serviços lover´s unipessoal.lda </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="nav">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <div class="menu">
+            <li><a href="#topo">Início</a></li>
+            <li><a href="#our-products">Reservas</a></li>
+            <li><a href="#about_us">Sobre</a></li>
+            <li><a href="#contactos">Contactos</a></li>
+        </div>
+    </div>
+    <img src="img/logo-isabela-removebg-preview.png" alt="" class="logo">
+    <div class="topo" id="topo">
+        <div class="col-2">
+            <h1>O que precisares <br> Nós limpamos!</h1>
+            <p>Cada superfície limpa revela um brilho escondido!</p>
+            <br><a href="#our-products" class="btn"> Mais informações &#8594;</a>
+        </div>
+        <img src="img/15412010-mulher-gosta-de-limpar-a-casa-com-aspirador-de-po-menina-sorridente-limpa-a-casa-personagem-de-mulher-aspirando-o-chao-servico-de-limpeza-servico-de-limpeza-ilustracaoial-vetor.png" alt="">
+    </div>
+    <br>
+    <br>
+    <section class="products">
+        <h2 id="our-products" class="Our">Nossos Serviços</h2>
+        <div class="all-products">
+            <div class="product">
+                <img src="img/limpeza_domestica.jpg">
+                <div class="product-info">
+                    <h4 class="product-title">Limpezas domésticas</h4>
+                    <p class="product-price">Sob medida</p>
+                    <a class="product-btn" href="#">Reserva agora</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/limpeza_estabelecimentos.jpg">
+                <div class="product-info">
+                    <h4 class="product-title">Limpezas de estabelecimentos</h4>
+                    <p class="product-price">Sob medida</p>
+                    <a class="product-btn" href="#">Reserva agora</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/limpezas_extriores.jpg">
+                <div class="product-info">
+                    <h4 class="product-title">Limpezas de condomínio</h4>
+                    <p class="product-price">Sob medida</p>
+                    <a class="product-btn" href="#">Reserva agora</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/posobra-Photoroom.png">
+                <div class="product-info">
+                    <h4 class="product-title">Pós-obra</h4>
+                    <p class="product-price">Sob medida</p>
+                    <a class="product-btn" href="#">Reserva agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <h2 class="Our">Sobre nós</h2>
+    <section id="about_us" class="about-us">
+        <img src="img/logo-isabela-removebg-preview.png" alt="">
+        <div class="about-us-content">
+            <h2>Sobre Nós</h2>
+            <p>Oferecemos limpeza e manutenção profissional para garantir um ambiente agradável e impecável.</p>
+        </div>
+    </section>
+    <br>
+    <br>
+    <h2 id="contactos" class="Our">Contactos</h2>
+    <section class="about-us">
+        <img src="img/logo-isabela-removebg-preview.png" alt="Sobre Nós">
+        <div class="about-us-content">
+            <h2>Isabel</h2>
+            <p>Formas de contacto:</p>
+            <p>Email: servicosloversgeral@gmail.com</p>
+            <p>Tel: 934 877 036 / 937 373 671</p>
+            <p>Facebook: @servicos.lover.s</p>
+        </div>
+    </section>
+    <br>
+    <section class="about-us">
+        <img src="img/pedro.jpg" alt="Sobre Nós">
+        <div class="about-us-content">
+            <h2>Pedro Moisés</h2>
+            <p>Desenvolvedor deste Website</p>
+            <p>Formas de contacto:</p>
+            <p>Email: pedro14moises@gmail.com</p>
+            <p>Tel: 913 903 399</p>
+            <p>WhatsApp: 913 903 399</p>
+        </div>
+    </section>
+</body>
+
+        <br>
+        <br>
+    <footer>
+        <p>&copy; 2025 Serviços lover´s unipessoal.lda. Todos os direitos reservados.</p>
+        <p>
+            <a href="#topo">Página Inicial</a> |
+            <a href="#about_us">Sobre</a> |
+            <a href="#contactos-">Contatos</a>
+        </p>
+    </footer>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Por favor, entre em contacto com o número de telefone: 937 737 671 para fazer a sua reserva.</p>
+        </div>
+    </div>
+
+    <script>
+                    // Script para abrir e fechar o modal
+     document.querySelectorAll('.product-btn').forEach(function(button) {
+         button.addEventListener('click', function(event) {
+             event.preventDefault();
+             document.getElementById('myModal').style.display = "flex";
+         });
+     });
+
+     document.querySelector('.close').addEventListener('click', function() {
+         document.getElementById('myModal').style.display = "none";
+     });
+
+     window.addEventListener('click', function(event) {
+         if (event.target == document.getElementById('myModal')) {
+             document.getElementById('myModal').style.display = "none";
+         }
+     });
+    </script>
+
+  
+    <script src="style.js"></script>
+</body>
+</html>
